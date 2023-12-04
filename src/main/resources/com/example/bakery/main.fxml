@@ -1,16 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.bakery.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane fx:id="myAnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #dfedf3;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bakery.HelloController">
+    <children>
+        <Label alignment="CENTER" layoutX="14.0" layoutY="22.0" prefHeight="39.0" prefWidth="466.0" text="Рогова Анастасия ПИ -425Б" textFill="#090dc4">
+            <font>
+                <Font name="Times New Roman" size="35.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="-2.0" layoutY="61.0" prefHeight="698.0" prefWidth="1280.0" style="-fx-background-color: #fafafa;">
+            <children>
+                <LineChart fx:id="salesChart" layoutX="55.0" layoutY="25.0" prefHeight="400.0" prefWidth="446.0">
+                    <xAxis>
+                        <CategoryAxis fx:id="date" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis fx:id="sales" prefHeight="396.0" prefWidth="27.0" side="LEFT" style="-fx-background-color: #fafafa;" />
+                    </yAxis>
+                </LineChart>
+            <Button fx:id="apply" layoutX="37.0" layoutY="483.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="132.0" style="-fx-background-color: #4c5c6c;" text="Поехали" textFill="#f0f0f0">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="258.0" layoutY="416.0" prefHeight="18.0" prefWidth="44.0" text="Время">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="501.0" layoutY="105.0" prefHeight="18.0" prefWidth="124.0" text="Улитка греческая">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="501.0" layoutY="74.0" prefHeight="18.0" prefWidth="124.0" text="Слойки с повидлом">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="501.0" layoutY="136.0" prefHeight="18.0" prefWidth="124.0" text="Круассан">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="498.0" layoutY="49.0" prefHeight="19.0" prefWidth="162.0" text="Расходы на продукцию">
+               <font>
+                  <Font name="Times New Roman" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="501.0" layoutY="168.0" prefHeight="18.0" prefWidth="230.0" text="Улитка с изюмом и заварным кремом">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="501.0" layoutY="199.0" prefHeight="18.0" prefWidth="230.0" text="Чиабатта">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="croissantLabel" layoutX="758.0" layoutY="136.0" prefHeight="18.0" prefWidth="124.0" text="0 рублей">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="puffsLabel" layoutX="758.0" layoutY="74.0" prefHeight="18.0" prefWidth="124.0" text="0 рублей">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="snailLabel" layoutX="758.0" layoutY="168.0" prefHeight="18.0" prefWidth="124.0" text="0 рублей">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="ciabattaLabel" layoutX="758.0" layoutY="199.0" prefHeight="18.0" prefWidth="124.0" text="0 рублей">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="498.0" layoutY="280.0" prefHeight="19.0" prefWidth="162.0" text="Общие доходы:">
+               <font>
+                  <Font name="Times New Roman" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="greekSnailLabel" layoutX="758.0" layoutY="105.0" prefHeight="18.0" prefWidth="124.0" text="0 рублей">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="valLabel" layoutX="758.0" layoutY="280.0" prefHeight="18.0" prefWidth="124.0" text="0 рублей">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="16.0" prefHeight="20.0" prefWidth="124.0" text="Расходы в рублях">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="501.0" layoutY="225.0" prefHeight="18.0" prefWidth="230.0" text="Итого">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="sumLabel" layoutX="758.0" layoutY="225.0" prefHeight="18.0" prefWidth="124.0" text="0 рублей">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="breakButton" layoutX="201.0" layoutY="483.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="132.0" style="-fx-background-color: #4c5c6c;" text="Отказ системы" textFill="#f0f0f0">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="501.0" layoutY="311.0" prefHeight="18.0" prefWidth="230.0" text="Проданный  объем продукции:">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="producionVal" layoutX="758.0" layoutY="311.0" prefHeight="18.0" prefWidth="124.0" text="0 шт">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <PieChart fx:id="pieChart" layoutX="832.0" layoutY="49.0" prefHeight="477.0" prefWidth="446.0" />
+            <Button fx:id="repairButton" layoutX="366.0" layoutY="483.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="132.0" style="-fx-background-color: #4c5c6c;" text="Починить" textFill="#f0f0f0">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="breakButton1" layoutX="37.0" layoutY="536.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="132.0" style="-fx-background-color: #4c5c6c;" text="Поломка" textFill="#f0f0f0">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="repairButton1" layoutX="201.0" layoutY="536.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="302.0" style="-fx-background-color: #4c5c6c;" text="Вызвать мастера по автоматам" textFill="#f0f0f0">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+            </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
